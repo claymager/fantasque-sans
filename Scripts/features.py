@@ -25,7 +25,7 @@ def update_features(font):
         feature calt {{
         {}
         }} calt;
-    ''').format(indent(rules, '  '))
+    ''').format(indent(rules, '  ')).encode('utf-8')
 
     # print(fea_code)  # DEBUG
 
