@@ -10,7 +10,7 @@ all: $(ZIP_FILE)
 $(ZIP_FILE): $(TTF_FILES)
 	Scripts/zip-all-variants Variants
 
-Variants/Normal/TTF/%.ttf: Sources/%.sfdir
+Variants/Normal/TTF/%.ttf: Sources/%.sfdir Scripts
 	mkdir -p Variants
 	Scripts/validate-font "$<"
 	Scripts/generate-font-variants "$<" Variants
